@@ -37,7 +37,7 @@ string reverse_words(string s) {
         r_start = position - 1;
         position = reversed.find_last_of(' ', r_start);
     }
-    s.replace(s_start, r_start, reversed.substr(position + 1, r_start - position));
+    s.replace(s_start, r_start + 1, reversed.substr(position + 1, r_start - position));
     cout << s << endl;
     return s;
 }
